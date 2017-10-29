@@ -13,6 +13,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import spittr.entity.Spitter;
 import spittr.service.SpitterService;
 
+/**
+ * Spitter控制器
+ * @author mingqiu
+ *
+ */
 @Controller
 @RequestMapping("/spitter")
 public class SpitterController {

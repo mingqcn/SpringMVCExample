@@ -2,6 +2,11 @@ package spittr.entity;
 
 import java.util.Date;
 
+/**
+ * Spittle对象
+ * @author mingqiu
+ *
+ */
 public class Spittle {
 
 	private final Long id;

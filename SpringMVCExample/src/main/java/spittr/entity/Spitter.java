@@ -1,5 +1,10 @@
 package spittr.entity;
 
+/**
+ * Spitter对象
+ * @author mingqiu
+ *
+ */
 public class Spitter {
 
   private Long id;

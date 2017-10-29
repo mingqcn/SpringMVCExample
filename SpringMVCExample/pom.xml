@@ -2,7 +2,7 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>xmu.edu.cn</groupId>
-  <artifactId>FreeMarkerExample</artifactId>
+  <artifactId>SpringMVCExample</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <name>FreeMarkerExample Maven Webapp</name>
   <url>http://maven.apache.org</url>
@@ -33,7 +33,6 @@
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
-
 	<build>
 		<plugins>
 			<plugin>

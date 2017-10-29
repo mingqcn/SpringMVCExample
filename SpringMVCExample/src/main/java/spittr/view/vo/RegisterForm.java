@@ -2,6 +2,11 @@ package spittr.view.vo;
 
 import spittr.entity.Spitter;
 
+/**
+ * 登记表对象
+ * @author mingqiu
+ *
+ */
 public class RegisterForm {
   private String firstName;
   private String lastName;

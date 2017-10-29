@@ -7,8 +7,13 @@ import org.springframework.stereotype.Service;
 import spittr.entity.Spittle;
 import spittr.service.SpittleService;
 
+/**
+ * 我的Spittle服务接口实现
+ * @author mingqiu
+ *
+ */
 @Service
-public class MySpittleServiceImp implements SpittleService {
+public class MySpittleServiceImpl implements SpittleService {
 
 	@Override
 	public List<Spittle> findRecentSpittles() {

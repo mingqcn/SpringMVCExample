@@ -6,6 +6,11 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+/**
+ * 主页控制器
+ * @author mingqiu
+ *
+ */
 @Controller
 @RequestMapping("/")
 public class HomeController {

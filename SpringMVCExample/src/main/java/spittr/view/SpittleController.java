@@ -15,6 +15,11 @@ import spittr.entity.Spittle;
 import spittr.service.*;
 import spittr.view.vo.SpittleForm;
 
+/**
+ * Spittle控制器
+ * @author mingqiu
+ *
+ */
 @Controller
 @RequestMapping("/spittles")
 public class SpittleController {
