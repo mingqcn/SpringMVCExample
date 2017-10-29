@@ -2,7 +2,6 @@ package spittr.view;
 
 import java.util.Date;
 
-import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -26,10 +25,11 @@ public class SpittleController {
   private SpittleService spittleService;
 
   @RequestMapping(method=RequestMethod.GET)
-  public List<Spittle> spittles(
+  public String spittles(
       @RequestParam(value="max", defaultValue=MAX_LONG_AS_STRING) long max,
-      @RequestParam(value="count", defaultValue="20") int count) {
-    return spittleService.findSpittles(max, count);
+      @RequestParam(value="count", defaultValue="20") int count, Model model) {
+	  model.addAttribute("spittles",spittleService.findSpittles(max, count));
+    return "allSpittles";
   }
 
   @RequestMapping(value="/{spittleId}", method=RequestMethod.GET)

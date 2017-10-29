@@ -4,6 +4,7 @@ import static org.springframework.web.bind.annotation.RequestMethod.*;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -17,6 +18,7 @@ import spittr.service.SpitterService;
 public class SpitterController {
 	
   @Autowired  
+  @Qualifier("mySpitterService")
   private SpitterService spitterService;
   
   @RequestMapping(value="/register", method=GET)
@@ -29,7 +31,7 @@ public class SpitterController {
       
 	Spitter newSpitter =  spitterService.save(spitter);
 	if	(null != newSpitter) {
-		return "redirect:/spitter/" + spitter.getUsername();
+		return "redirect:/spitter/" + newSpitter.getUsername();
 	}else {
 	     return "registerForm";
 	}

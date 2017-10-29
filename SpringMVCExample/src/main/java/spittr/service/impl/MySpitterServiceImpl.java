@@ -8,7 +8,7 @@ import spittr.entity.Spitter;
 import spittr.entity.Spittle;
 import spittr.service.SpitterService;
 
-@Service
+@Service("mySpitterService")
 public class MySpitterServiceImpl implements SpitterService {
 
 	@Override
