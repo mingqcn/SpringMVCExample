@@ -1,7 +1,5 @@
 package spittr.view;
 
-import java.util.Date;
-
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -13,7 +11,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import spittr.entity.Spittle;
 import spittr.service.*;
-import spittr.view.vo.SpittleForm;
 
 /**
  * Spittle控制器
@@ -46,9 +43,8 @@ public class SpittleController {
   }
 
   @RequestMapping(method=RequestMethod.POST)
-  public String saveSpittle(SpittleForm form, Model model) throws Exception {
-	  spittleService.save(new Spittle(null, form.getMessage(), new Date(), 
-        form.getLongitude(), form.getLatitude()));
+  public String saveSpittle(Spittle spittle, Model model) throws Exception {
+	  spittleService.save(spittle);
     return "redirect:/spittles";
   }
 
